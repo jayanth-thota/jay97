@@ -1,0 +1,27 @@
+<table class="table table-hover table-sm">
+
+    <thead class="thead-light">
+        <tr>
+            <th>Id</th>
+            <th>StockExchange</th>
+            <th>Brief</th>
+            <th>ContactAddress</th>
+            <th>Remarks</th>
+            
+
+
+        </tr>
+    </thead>
+
+<tbody>
+    <tr *ngFor="let stockexchange of stockexchangelist">
+        <td>{{stockexchange.id}}</td>
+        <td>{{stockexchange.stockExchange}}</td>
+        <td>{{stockexchange.brief}}</td>
+        <td>{{stockexchange.contactAddress}}</td>
+        <td>{{stockexchange.remarks}}</td>
+        <td><button (click)="updateStockexchange(stockexchange)" class="btn btn-primary">Update</button></td> 
+        <td><button (click)="deleteStockexchange(stockexchange)" class="btn btn-danger">Delete</button> </td>
+    </tr>
+</tbody><br>
+</table>

@@ -1,0 +1,35 @@
+<table class="table table-hover table-sm">
+
+    <thead class="thead-light">
+  
+      <tr>
+  
+        <th>Id</th>
+  
+        <th>Sector Name</th>
+  
+        <th>Brief</th>
+  
+       
+  
+  
+      </tr>
+  
+    </thead>
+  
+    <tbody>
+  
+       <tr *ngFor="let sectors of sectorslist">
+  
+        <td>{{sectors.id}}</td>
+  
+        <td>{{sectors.sectorName}}</td>
+  
+        <td>{{sectors.brief}}</td>
+        <td><button (click)="updateSectors(sectors)" class="btn btn-primary">Update</button></td>
+        <td><button (click)="deletesectors(sectors)" class="btn btn-danger">Delete</button> </td>
+       </tr>
+  
+    </tbody><br>
+  
+  </table> 

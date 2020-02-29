@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html>
+
+ <body>
+
+<h3>CreateStock Exchange</h3>
+
+<div class="row">
+
+ <div class="col-sm-4"></div>
+
+ <div class="col-sm-4" >
+
+  <div [hidden]="submitted" style="width: 400px;">
+
+   <form [formGroup]="stockexchangesaveform" #saveStockexchange1 (ngSubmit)="saveStockexchange(saveStockexchange1)">
+
+     <div class="form-group">
+
+       <label for="name">Id</label>
+
+       <input type="number" class="form-control" autofocus formControlName="id" data-toggle="tooltip"
+
+         data-placement="right" title="Enter Id" >
+
+       <div class="alert alert-danger" *ngIf = "(stockexchangesaveform.get('id').touched) && (stockexchangesaveform.get('id').invalid)"
+
+        style="margin-top: 5px;">
+
+         <span *ngIf="stockexchangesaveform.get('id').errors.required">id is required</span>
+
+          <span *ngIf = "stockexchangesaveform.get('id').errors.minlength">
+
+            MinLength Error
+
+          </span>
+
+        </div>
+
+     </div>
+
+
+
+     <div class="form-group">
+
+      <label for="name">stockExchange</label>
+
+      <input type="text" class="form-control" formControlName="stockExchange" data-toggle="tooltip"
+
+        data-placement="right" title="Enter stockExchange" >
+
+      <div class="alert alert-danger" *ngIf = "(stockexchangesaveform.get('stockExchange').touched) && (stockexchangesaveform.get('stockExchange').invalid)"
+
+       style="margin-top: 5px;">
+
+        <span *ngIf="stockexchangesaveform.get('stockExchange').errors.required">stockExchange is required</span>
+
+         <span *ngIf = "stockexchangesaveform.get('stockExchange').errors.minlength">
+
+           MinLength Error
+
+         </span>
+
+       </div>
+
+    </div>
+
+
+
+    <div class="form-group">   
+
+        <label for="name">Brief</label>
+  
+        <input type="text" class="form-control" formControlName="brief" data-toggle="tooltip"
+  
+          data-placement="right" title="Enter brief" >
+  
+        <div class="alert alert-danger" *ngIf = "(stockexchangesaveform.get('brief').touched) && (stockexchangesaveform.get('brief').invalid)"
+  
+         style="margin-top: 5px;">
+  
+          <span *ngIf="stockexchangesaveform.get('brief').errors.required">brief is required</span>
+  
+           <span *ngIf = "stockexchangesaveform.get('brief').errors.minlength">
+  
+             MinLength Error
+  
+           </span>
+  
+         </div>
+  
+      </div>
+  
+  
+
+
+      <div class="form-group">   
+
+        <label for="name">ContactAddress</label>
+  
+        <input type="text" class="form-control" formControlName="contactAddress" data-toggle="tooltip"
+  
+          data-placement="right" title="Enter contactAddress" >
+  
+        <div class="alert alert-danger" *ngIf = "(stockexchangesaveform.get('contactAddress').touched) && (stockexchangesaveform.get('contactAddress').invalid)"
+  
+         style="margin-top: 5px;">
+  
+          <span *ngIf="stockexchangesaveform.get('contactAddress').errors.required">contactAddress is required</span>
+  
+           <span *ngIf = "stockexchangesaveform.get('contactAddress').errors.minlength">
+  
+             MinLength Error
+  
+           </span>
+  
+         </div>
+  
+      </div>
+  
+
+      <div class="form-group">   
+
+        <label for="name">Remarks</label>
+  
+        <input type="text" class="form-control" formControlName="remarks" data-toggle="tooltip"
+  
+          data-placement="right" title="Enter remarks" >
+  
+        <div class="alert alert-danger" *ngIf = "(stockexchangesaveform.get('remarks').touched) && (stockexchangesaveform.get('remarks').invalid)"
+  
+         style="margin-top: 5px;">
+  
+          <span *ngIf="stockexchangesaveform.get('remarks').errors.required">remarks is required</span>
+  
+           <span *ngIf = "stockexchangesaveform.get('remarks').errors.minlength">
+  
+             MinLength Error
+  
+           </span>
+  
+         </div>
+  
+      </div>
+  
+      
+      <button type="submit" class="btn btn-success">Submit</button>
+ 
+
+   </form>
+
+ </div>
+
+ </div>
+
+ <div class="col-sm-4"></div>
+
+</div>
+
+</body>
+
+</html>
+
+
+
+
+

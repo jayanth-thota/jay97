@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+
+<html>
+
+ <body>
+
+<h3>CreateCompany</h3>
+
+<div class="row">
+
+ <div class="col-sm-4"></div>
+
+ <div class="col-sm-4" >
+
+  <div [hidden]="submitted" style="width: 400px;">
+
+   <form [formGroup]="companysaveform" #saveCompany1 (ngSubmit)="saveCompany(savecompany1)">
+
+     <div class="form-group">
+
+       <label for="name">Id</label>
+
+       <input type="text" class="form-control" autofocus formControlName="id" data-toggle="tooltip"
+
+         data-placement="right" title="Enter Id" >
+
+       <div class="alert alert-danger" *ngIf = "(companysaveform.get('id').touched) && (companysaveform.get('id').invalid)"
+
+        style="margin-top: 5px;">
+
+         <span *ngIf="companysaveform.get('id').errors.required">id is required</span>
+
+          <span *ngIf = "companysaveform.get('id').errors.minlength">
+
+            MinLength Error
+
+          </span>
+
+        </div>
+
+     </div>
+
+
+
+     <div class="form-group">
+
+      <label for="name">CompanyName</label>
+
+      <input type="text" class="form-control" formControlName="companyName" data-toggle="tooltip"
+
+        data-placement="right" title="Enter Company Name" >
+
+      <div class="alert alert-danger" *ngIf = "(companysaveform.get('companyName').touched) && (companysaveform.get('companyName').invalid)"
+
+       style="margin-top: 5px;">
+
+        <span *ngIf="companysaveform.get('companyName').errors.required">CompanyName is required</span>
+
+         <span *ngIf = "companysaveform.get('companyName').errors.minlength">
+
+           MinLength Error
+
+         </span>
+
+       </div>
+
+    </div>
+
+
+
+    <div class="form-group">   
+
+        <label for="name">Turnover</label>
+  
+        <input type="number" class="form-control" formControlName="turnOver" data-toggle="tooltip"
+  
+          data-placement="right" title="Enter turnOver" >
+  
+        <div class="alert alert-danger" *ngIf = "(companysaveform.get('turnOver').touched) && (companysaveform.get('turnOver').invalid)"
+  
+         style="margin-top: 5px;">
+  
+          <span *ngIf="companysaveform.get('turnOver').errors.required">turnover is required</span>
+  
+           <span *ngIf = "companysaveform.get('turnOver').errors.minlength">
+  
+             MinLength Error
+  
+           </span>
+  
+         </div>
+  
+      </div>
+  
+  
+      <div class="form-group">
+
+        <label for="name">CEO</label>
+  
+        <input type="text" class="form-control" formControlName="ceo" data-toggle="tooltip"
+  
+          data-placement="right" title="Enter ceo" >
+  
+        <div class="alert alert-danger" *ngIf = "(companysaveform.get('ceo').touched) && (companysaveform.get('ceo').invalid)"
+  
+         style="margin-top: 5px;">
+  
+          <span *ngIf="companysaveform.get('ceo').errors.required">ceo is required</span>
+  
+           <span *ngIf = "companysaveform.get('ceo').errors.minlength">
+  
+             MinLength Error
+  
+           </span>
+  
+         </div>
+  
+      </div>
+
+
+
+
+
+      <div class="form-group">
+
+        <label for="name">BoardOfDirectors</label>
+  
+        <input type="text" class="form-control" formControlName="boardOfDirectors" data-toggle="tooltip"
+  
+          data-placement="right" title="Enter boardOfDirectors" >
+  
+        <div class="alert alert-danger" *ngIf = "(companysaveform.get('boardOfDirectors').touched) && (companysaveform.get('boardOfDirectors').invalid)"
+  
+         style="margin-top: 5px;">
+  
+          <span *ngIf="companysaveform.get('boardOfDirectors').errors.required">BoardOfDirectors is required</span>
+  
+           <span *ngIf = "companysaveform.get('boardOfDirectors').errors.minlength">
+  
+             MinLength Error
+  
+           </span>
+  
+         </div>
+  
+      </div>
+
+
+
+
+
+
+      <div class="form-group">
+
+        <label for="name">ListedStockExchange</label>
+  
+        <input type="text" class="form-control" formControlName="listedStockExchange" data-toggle="tooltip"
+  
+          data-placement="right" title="Enter listedStockExchanges" >
+  
+        <div class="alert alert-danger" *ngIf = "(companysaveform.get('listedStockExchange').touched) && (companysaveform.get('listedStockExchange').invalid)"
+  
+         style="margin-top: 5px;">
+  
+          <span *ngIf="companysaveform.get('listedStockExchange').errors.required">listedStockExchange is required</span>
+  
+           <span *ngIf = "companysaveform.get('listedStockExchange').errors.minlength">
+  
+             MinLength Error
+  
+           </span>
+  
+         </div>
+  
+      </div>
+  
+
+  
+    
+
+
+
+
+
+      <div class="form-group">
+
+        <label for="name">Sector</label>
+  
+        <input type="text" class="form-control" formControlName="sector" data-toggle="tooltip"
+  
+          data-placement="right" title="Enter sector" >
+  
+        <div class="alert alert-danger" *ngIf = "(companysaveform.get('sector').touched) && (companysaveform.get('sector').invalid)"
+  
+         style="margin-top: 5px;">
+  
+          <span *ngIf="companysaveform.get('sector').errors.required">sector is required</span>
+  
+           <span *ngIf = "companysaveform.get('sector').errors.minlength">
+  
+             MinLength Error
+  
+           </span>
+  
+         </div>
+  
+      </div>
+  
+
+
+  
+    
+
+
+      <div class="form-group">
+
+        <label for="name">Brief</label>
+  
+        <input type="text" class="form-control" formControlName="brief" data-toggle="tooltip"
+  
+          data-placement="right" title="Enter brief" >
+  
+        <div class="alert alert-danger" *ngIf = "(companysaveform.get('brief').touched) && (companysaveform.get('brief').invalid)"
+  
+         style="margin-top: 5px;">
+  
+          <span *ngIf="companysaveform.get('brief').errors.required">brief is required</span>
+  
+           <span *ngIf = "companysaveform.get('brief').errors.minlength">
+  
+             MinLength Error
+  
+           </span>
+  
+         </div>
+  
+      </div>
+
+       
+  
+  
+
+
+     
+     
+
+
+    <div class="form-group">
+
+        <label for="name">StockCode</label>
+  
+        <input type="text" class="form-control" formControlName="stockCode" data-toggle="tooltip"
+  
+          data-placement="right" title="confirmed" >
+  
+        <div class="alert alert-danger" *ngIf = "(companysaveform.get('stockCode').touched) && (companysaveform.get('stockCode').invalid)"
+  
+         style="margin-top: 5px;">
+  
+          <span *ngIf="companysaveform.get('stockCode').errors.required">stockCode is required</span>
+  
+           <span *ngIf = "companysaveform.get('stockCode').errors.minlength">
+  
+             MinLength Error
+  
+           </span>
+  
+         </div>
+  
+      </div>
+  
+
+
+
+     <button type="submit" class="btn btn-success" >Submit</button>
+ 
+
+   </form>
+
+ </div>
+
+ </div>
+
+ <div class="col-sm-4"></div>
+
+</div>
+
+</body>
+
+</html>
+
+
+

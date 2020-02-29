@@ -1,0 +1,118 @@
+
+
+<!DOCTYPE html>
+
+<html>
+
+ <body>
+
+<h3>CreateSectors</h3>
+
+<div class="row">
+
+ <div class="col-sm-4"></div>
+
+ <div class="col-sm-4" >
+
+  <div [hidden]="submitted" style="width: 400px;">
+
+   <form [formGroup]="sectorssaveform" #saveSectors1 (ngSubmit)="saveSectors(saveSectors1)">
+
+     <div class="form-group">
+
+       <label for="name">Id</label>
+
+       <input type="number" class="form-control" autofocus formControlName="id" data-toggle="tooltip"
+
+         data-placement="right" title="Enter Id" >
+
+       <div class="alert alert-danger" *ngIf = "(sectorssaveform.get('id').touched) && (sectorssaveform.get('id').invalid)"
+
+        style="margin-top: 5px;">
+
+         <span *ngIf="sectorssaveform.get('id').errors.required">id is required</span>
+
+          <span *ngIf = "sectorssaveform.get('id').errors.minlength">
+
+            MinLength Error
+
+          </span>
+
+        </div>
+
+     </div>
+
+
+
+     <div class="form-group">
+
+      <label for="name">sectorName</label>
+
+      <input type="text" class="form-control" formControlName="sectorName" data-toggle="tooltip"
+
+        data-placement="right" title="Enter sectorName" >
+
+      <div class="alert alert-danger" *ngIf = "(sectorssaveform.get('sectorName').touched) && (sectorssaveform.get('sectorName').invalid)"
+
+       style="margin-top: 5px;">
+
+        <span *ngIf="sectorssaveform.get('sectorName').errors.required">sectorName is required</span>
+
+         <span *ngIf = "sectorssaveform.get('sectorName').errors.minlength">
+
+           MinLength Error
+
+         </span>
+
+       </div>
+
+    </div>
+
+
+
+    <div class="form-group">   
+
+        <label for="name">Brief</label>
+  
+        <input type="text" class="form-control" formControlName="brief" data-toggle="tooltip"
+  
+          data-placement="right" title="Enter brief" >
+  
+        <div class="alert alert-danger" *ngIf = "(sectorssaveform.get('brief').touched) && (sectorssaveform.get('brief').invalid)"
+  
+         style="margin-top: 5px;">
+  
+          <span *ngIf="sectorssaveform.get('brief').errors.required">brief is required</span>
+  
+           <span *ngIf = "sectorssaveform.get('brief').errors.minlength">
+  
+             MinLength Error
+  
+           </span>
+  
+         </div>
+  
+      </div>
+  
+  
+      
+      <button type="submit" class="btn btn-success">Submit</button>
+ 
+
+   </form>
+
+ </div>
+
+ </div>
+
+ <div class="col-sm-4"></div>
+
+</div>
+
+</body>
+
+</html>
+
+
+
+

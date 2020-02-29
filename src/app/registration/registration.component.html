@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html>
+
+ <body>
+
+<h3>Registration</h3>
+
+<div class="row">
+
+ <div class="col-sm-4"></div>
+
+ <div class="col-sm-4" >
+
+  <div [hidden]="submitted" style="width: 400px;">
+
+   <form [formGroup]="usersaveform" #saveUser1 (ngSubmit)="saveUser(saveUser1)">
+
+     <div class="form-group">
+
+       <label for="name">Id</label>
+
+       <input type="text" class="form-control" autofocus formControlName="id" data-toggle="tooltip"
+
+         data-placement="right" title="Enter Id" >
+
+       <div class="alert alert-danger" *ngIf = "(usersaveform.get('id').touched) && (usersaveform.get('id').invalid)"
+
+        style="margin-top: 5px;">
+
+         <span *ngIf="usersaveform.get('id').errors.required">id is required</span>
+
+          <span *ngIf = "usersaveform.get('id').errors.minlength">
+
+            MinLength Error
+
+          </span>
+
+        </div>
+
+     </div>
+
+
+
+     <div class="form-group">
+
+      <label for="name">UserName</label>
+
+      <input type="text" class="form-control" formControlName="userName" data-toggle="tooltip"
+
+        data-placement="right" title="Enter User Name" >
+
+      <div class="alert alert-danger" *ngIf = "(usersaveform.get('userName').touched) && (usersaveform.get('userName').invalid)"
+
+       style="margin-top: 5px;">
+
+        <span *ngIf="usersaveform.get('userName').errors.required">username is required</span>
+
+         <span *ngIf = "usersaveform.get('userName').errors.minlength">
+
+           MinLength Error
+
+         </span>
+
+       </div>
+
+    </div>
+
+
+
+    <div class="form-group">
+
+        <label for="name">Password</label>
+  
+        <input type="password" class="form-control" formControlName="password" data-toggle="tooltip"
+  
+          data-placement="right" title="Enter Password" >
+  
+        <div class="alert alert-danger" *ngIf = "(usersaveform.get('password').touched) && (usersaveform.get('password').invalid)"
+  
+         style="margin-top: 5px;">
+  
+          <span *ngIf="usersaveform.get('password').errors.required">password is required</span>
+  
+           <span *ngIf = "usersaveform.get('password').errors.minlength">
+  
+             MinLength Error
+  
+           </span>
+  
+         </div>
+  
+      </div>
+  
+  
+  
+
+
+      <div class="form-group">
+
+
+
+        <label for="branch">Usertype</label>
+    
+    
+    
+        <select class="form-control" formControlName="userType" data-toggle="tooltip"
+    
+    
+    
+          data-placement="right" title="Select Usertype" required="required">
+    
+    
+    
+         <option value="null">--Select Type--</option>
+    
+    
+    
+         <option value="User">User</option>
+    
+    
+    
+         <option value="Admin">Admin</option>
+    
+    
+    
+    
+    
+    
+    
+        </select>
+    
+    
+    
+       </div>
+
+
+
+     <div class="form-group">
+
+       <label for="name">Email</label>
+
+       <input type="text" class="form-control" formControlName="email"
+
+        data-toggle="tooltip" data-placement="right" title="Enter User Email">
+
+        <div class="alert alert-danger" *ngIf = "(usersaveform.get('email').touched) && (usersaveform.get('email').invalid)"
+
+        style="margin-top: 5px;">
+
+         <span *ngIf="usersaveform.get('email').errors.required">User Email is Required</span>
+
+          <span *ngIf = "usersaveform.get('email').errors.email">
+
+            Invalid Email Format
+
+          </span>
+
+        </div>
+
+     </div>
+
+
+
+     <div class="form-group">
+
+      <label for="name">Contact </label>
+
+      <input type="text" class="form-control" formControlName="contact" data-toggle="tooltip"
+
+        data-placement="right" title="Enter Contact Number" >
+
+      <div class="alert alert-danger" *ngIf = "(usersaveform.get('contact').touched) && (usersaveform.get('contact').invalid)"
+
+       style="margin-top: 5px;">
+
+        <span *ngIf="usersaveform.get('contact').errors.required">Contact is required</span>
+
+         <span *ngIf = "usersaveform.get('contact').errors.minlength">
+
+           MinLength Error
+
+         </span>
+
+       </div>
+
+    </div>
+
+
+
+    <div class="form-group">
+
+        <label for="name">Confirmed</label>
+  
+        <input type="text" class="form-control" formControlName="confirmed" data-toggle="tooltip"
+  
+          data-placement="right" title="confirmed" >
+  
+        <div class="alert alert-danger" *ngIf = "(usersaveform.get('confirmed').touched) && (usersaveform.get('confirmed').invalid)"
+  
+         style="margin-top: 5px;">
+  
+          <span *ngIf="usersaveform.get('confirmed').errors.required">Confirmed is required</span>
+  
+           <span *ngIf = "usersaveform.get('confirmed').errors.minlength">
+  
+             MinLength Error
+  
+           </span>
+  
+         </div>
+  
+      </div>
+  
+
+
+
+     <button type="submit" class="btn btn-success" (click)=saveuserform>Submit</button>
+ 
+
+   </form>
+
+ </div>
+
+ </div>
+
+ <div class="col-sm-4"></div>
+
+</div>
+
+</body>
+
+</html>
+
+
+
